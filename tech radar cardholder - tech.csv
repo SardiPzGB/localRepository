@@ -1,0 +1,72 @@
+name,ring,quadrant,isNew,description
+Postgres 9.6,Adopt,Data Management,FALSE,Основная реляционная БД
+MongoDB 4.2,Trial,Data Management,TRUE,"Основная нереляционная БД. Успешно перевезли на неё aaa-service, ждём остальных"
+Cassandra,Assess ,Data Management,FALSE,Использовалась в MVP нотификаций. Экспертиза только у Димы Цыганкова
+MongoDB 2.6,Hold,Data Management,FALSE,Устаревшая версия. Для новых проектов не используем
+Elasticsearch,Trial,Data Management,FALSE,БД с возможностями полнотекстовго поиска. На практике используется нечасто. Есть хорошая экспертиза среди команды
+Redis,Adopt,Data Management,FALSE,Key-Value БД
+RabbitMQ 3.7,Adopt,Data Management,FALSE,Основная очередь сообщений
+Amazon S3,Adopt,Data Management,FALSE,Хранилище статики
+Java 8,Hold,Languages & Frameworks,FALSE,Основной язык разработки. Заменяется на Java 11 и Kotlin
+Java 11,Adopt,Languages & Frameworks,FALSE,Основной язык разработки. Сменил Java 8
+Kotlin,Trial,Languages & Frameworks,FALSE,"Широко используем для написания тестов. Осторожно в продакшн. Есть сервисы, написанные только на котлине"
+AspectJ,Assess ,Languages & Frameworks,FALSE,Язык программирования. Используем очень осторожно в инфраструктурных задачах
+TestContainers,Assess ,Languages & Frameworks,FALSE,Фреймворк для запуска докер образов в тестах. Использование постепенно распространяем на все сервисы
+JMockit,Hold,Languages & Frameworks,FALSE,"Фреймворк для мокирования. Мало кто знает, не Spring native. Отказались в пользу Mockito"
+Mockito,Adopt,Languages & Frameworks,FALSE,Основной фреймворк для мокирования
+Junit 4,Hold,Languages & Frameworks,FALSE,"Фреймворк для unit тестов, дополнительный"
+Junit 5,Adopt,Languages & Frameworks,FALSE,Основной фреймворк для unit тестов
+Awaitility,Adopt,Languages & Frameworks,FALSE,Используем в тестах для асинхронного ожидания результата
+WireMock,Adopt,Languages & Frameworks,FALSE,Сервис для мокирования ответов по сети.
+Spring 4.x,Hold,Languages & Frameworks,FALSE,Старый добрый спринг. Отказались в пользу Boot
+Spring Boot 2.x,Adopt,Languages & Frameworks,FALSE,Основной фреймворк для написания микросервисов
+Guava Cache,Hold,Languages & Frameworks,FALSE,"Нераспределённый кеш. Широко использовался ранее, теперь вместо него Caffeine"
+Caffeine Cache,Adopt,Languages & Frameworks,FALSE,Основной кеш уровня приложений. Нераспределённый
+Guava Rate Limiter,Adopt,Languages & Frameworks,FALSE,Широко используем для ограничения производительности (op/s) 
+Hystrix,Adopt,Languages & Frameworks,FALSE,Основной механизм circuit-breaker
+OpenFeign,Adopt,Languages & Frameworks,FALSE,Широко используем для синхронных вызовов между внутренними сервисами
+Netflix Feign,Hold,Languages & Frameworks,FALSE,Netflix больше не поддерживает собственный фреймворк
+RestTemplate,Adopt,Languages & Frameworks,FALSE,Широко используем для синхронных вызовов внешних сервисов
+Cardsmobile Throttles,Adopt,Languages & Frameworks,FALSE,Внутренний фреймворк для блокировки доступа к функциональности на определённое время 
+Cardsmobile ESB,Adopt,Languages & Frameworks,FALSE,Внутренний фреймворк для реализации абстракции publisher-subscriber и шаблона интеграции ESB
+Cardsmobile Inboxes,Adopt,Languages & Frameworks,FALSE,Внутренний фреймворк для реализации асинхронного шаблона интеграции Command
+Gson,Hold,Languages & Frameworks,FALSE,"Библиотека для JSON маршаллинга, отказались в пользу Spring native библиотеки Jackson "
+Jackson,Adopt,Languages & Frameworks,FALSE,Основная библиотека для JSON маршалинга
+Mapstruct,Adopt,Languages & Frameworks,FALSE,Преобразование DTO в доменные модели и обратно
+Lombok,Adopt,Languages & Frameworks,FALSE,Кодогенерация boilerplate кода DTO
+Activiti BPMN,Hold,Languages & Frameworks,FALSE,"Движок описания и выполнения бизнес процессов. Морально устарел, в новых проектах не используем"
+Quartz,Adopt,Languages & Frameworks,FALSE,"Шедулер для работы в контексте кластеризованных микросервисов. Громоздкий, отказаться бы на что-то другое"
+Open API (Swagger),Adopt,Languages & Frameworks,FALSE,Стандарт описания REST API микросервисов 
+Flyway,Adopt,Languages & Frameworks,FALSE,Инкрементальное обновление схемы Postgres 
+Mongobee,Hold,Languages & Frameworks,FALSE,"Управление конфигурацией микросервиса, хранимой в Mongo"
+Mongock,Adopt,Languages & Frameworks,FALSE,"Управление конфигурацией микросервиса, хранимой в Mongo"
+Cardsmobile Mongo Migrations,Hold,Languages & Frameworks,FALSE,"Внутренний фреймворк для управления конфигурацией микросервиса, хранимой в Mongo. Не используем в новых проектах"
+Hikari Connection Pool,Adopt,Languages & Frameworks,FALSE,JDBC пул соединений
+c3p0 Connection Pool,Hold,Languages & Frameworks,FALSE,"JDBC пул соединений, отказались в пользу hikari (активнее развивается)"
+Bouncy Castle,Adopt,Languages & Frameworks,FALSE,Реализация Java Crypto API и не только
+Micrometer,Trial,Languages & Frameworks,FALSE,Фреймворк для описания кастомных метрик работы сервисов
+slf4j,Adopt,Languages & Frameworks,FALSE,Фасад для логирования внутри приложений
+logback,Adopt,Languages & Frameworks,FALSE,Стандартная имплементация логирования внутри приложения
+Cardsmobile Collector,Adopt,Languages & Frameworks,FALSE,Внутренний фреймворк для трейсинга и диагностики ошибок в рантайм
+Jetty,Adopt,Languages & Frameworks,FALSE,Основной HTTP сервер для сервисов
+Tomcat,Hold,Languages & Frameworks,FALSE,Не используем в пользу Jetty
+Consul,Adopt,Infrastructure & Technologies,FALSE,Реализация Service Discovery
+Prometheus,Adopt,Infrastructure & Technologies,FALSE,Мониторинг и алертинг работы сервисов и инфраструктуры
+Graphana,Adopt,Infrastructure & Technologies,FALSE,Визуализация метрик мониторинга
+ELK,Adopt,Infrastructure & Technologies,FALSE,Централизованный сбор логов
+Nginx,Adopt,Infrastructure & Technologies,FALSE,Балансировщик и WAF 
+Hetzner,Adopt,Infrastructure & Technologies,FALSE,Нищебродское облако с дешёвым железом и минимумом гарантий
+Amazon AWS,Adopt,Infrastructure & Technologies,FALSE,Облако для быстрого масштабирования публичных сервисов в случае необходимости
+Lynx Private Cloud,Trial,Infrastructure & Technologies,FALSE,Облако для быстрого масштабирования любых сервисов в случае необходимости
+Lynx DC,Adopt,Infrastructure & Technologies,FALSE,Основная продакшн площадка
+Yandex Cloud,Trial,Infrastructure & Technologies,FALSE,Облако для тестовых окружений
+Mail.ru Cloud,Hold,Infrastructure & Technologies,FALSE,Мертворождённое облако
+SafeNet HSM,Adopt,Infrastructure & Technologies,FALSE,Аппаратный модуль шифрования
+Maven,Adopt,Infrastructure & Technologies,FALSE,Инструмент сборки сервисов и библиотек
+Gitlab (version control),Adopt,Infrastructure & Technologies,FALSE,Сиcтема версионирования кода
+Gitlab (CI/CD),Assess ,Infrastructure & Technologies,TRUE,CI/CD pipeline микросервисов. В разработке
+Docker,Assess ,Infrastructure & Technologies,FALSE,Используем для контейнеризации тестовой инфраструктуры
+Jenkins,Adopt,Infrastructure & Technologies,FALSE,Основая система сборки
+Feature Branch окружения,Assess ,Techniques & Practicies,FALSE,
+Мультимодульные Maven проекты,Hold,Techniques & Practicies,FALSE,"Не используем многомодульные проекты. 
+<br>Под каждый артефакт (сервис или библиотека) создаём отдельный репозиторий Git и отдельный Maven проект"
