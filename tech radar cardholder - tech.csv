@@ -52,7 +52,7 @@ Jetty,Adopt,Languages & Frameworks,FALSE,Основной HTTP сервер дл
 Tomcat,Hold,Languages & Frameworks,FALSE,Не используем в пользу Jetty
 Consul,Adopt,Infrastructure & Technologies,FALSE,Реализация Service Discovery
 Prometheus,Adopt,Infrastructure & Technologies,FALSE,Мониторинг и алертинг работы сервисов и инфраструктуры
-Graphana,Adopt,Infrastructure & Technologies,FALSE,Визуализация метрик мониторинга
+Grafana,Adopt,Infrastructure & Technologies,FALSE,Визуализация метрик мониторинга
 ELK,Adopt,Infrastructure & Technologies,FALSE,Централизованный сбор логов
 Nginx,Adopt,Infrastructure & Technologies,FALSE,Балансировщик и WAF 
 Hetzner,Adopt,Infrastructure & Technologies,FALSE,Нищебродское облако с дешёвым железом и минимумом гарантий
